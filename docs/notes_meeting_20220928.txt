@@ -1,0 +1,49 @@
+Progress:
+1. Sistem sudah dirakit dan dikonfigurasi
+2. Download data se-Jawa th 2017-2021 selesai
+3. Preprocessing raw data in progress (5 hari -- 15% complete)
+   Diperkirakan selesai dalam waktu 30-40 hari
+4. Secara paralel, sedang test cara2 percepatan preprocessing raw data:
+   o pemakaian script python (modul Snappy)
+   o efisiensi pengolahan data dengan fokus hanya di area daratan
+   o pengolahan dalam proyeksi geografis (bukan UTM)
+5. Perlu lisensi TeamViewer secepatnya (Rp 4.8jt/th)
+6. Pulau Madura apakah perlu dimasukkan?
+
+
+Scope pekerjaan gimana:
+1. Output:
+   o Hasil penelitian implementasi deep learing utk LBS:
+     - preproc S1
+     - pembuatan model LSTM
+     - inferensi model
+     - evaluasi akurasi LBS
+   
+   atau
+   
+   o LBS Jawa 2022
+
+2. Site untuk pengolahan:
+   o Kementan
+   o Kantor PT-TOS
+
+3. Mekanisme pengadaan:
+   o Penunjukan langsung --> dibawah 200jt
+   o 300jt plafon --> dipecah jadi 200jt + 100jt.
+
+     -- jasa konsultansi (100jt inc tax) & jasa lainnya (200jt incl tax)
+
+     -- pengadaan hardware
+
+     -- jasa lainnya: output 
+
+
+   o PPN & PPH dibayar Kementan --> cost mesti di-up
+   o 
+
+   o LPSE --> NOT
+
+   o Tidak fiktif & tidak ada fee.
+
+   o 260jt --> 
+     
