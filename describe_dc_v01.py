@@ -24,7 +24,7 @@ def describe_netcdf_file(file_path):
     print("\nGlobal Attributes (Metadata):")
     for attr in ds.ncattrs():
         print(f"  {attr}: {getattr(ds, attr)}")
-        if attr.lower() in ['description', 'history', 'source']:
+        if attr.lower() in ['description', 'history', 'source', 'bounds']:
             print(f"    Detailed {attr}: {getattr(ds, attr)}")  # Provide more context if specific key attributes are present
     
     # Dimensions information
@@ -48,6 +48,15 @@ def describe_netcdf_file(file_path):
             if attr_name.lower() in ['units', 'long_name', 'standard_name']:
                 print(f"        Explanation: {attr_value} is used to describe the measurement units, detailed naming or standard naming convention of the data.")
 
+    # Check if the 'bounds' attribute exists
+    if 'bounds' in ds.ncattrs():
+        # Retrieve the 'bounds' attribute
+        bounds_attr = ds.getncattr('bounds')
+        # Print the 'bounds' attribute
+        print("bounds:", bounds_attr)
+    else:
+        print("The attribute 'bounds' does not exist in this dataset.")
+
     # Calculate the total uncompressed size
     total_uncompressed_size = sum(var.size * var.dtype.itemsize for var in ds.variables.values())
 
@@ -65,5 +74,5 @@ def describe_netcdf_file(file_path):
     ds.close()
 
 # Example usage
-file_path = 'E:\PROCESSING\JAVALBS\99_WORK\B4-2022_DATACUBE.nc'
+file_path = 'E:\\PROCESSING\\JAVALBS\\03_PHASE3\\B3-2023N_DATACUBE.nc'
 describe_netcdf_file(file_path)
